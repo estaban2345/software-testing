@@ -140,10 +140,17 @@ class SplayTree:
 
 # Write test code in this function to achieve 
 # full statement coverage on the SplayTree class.
+
 def test():
-    Node = Node(3)
-    assert Node.key == 3
+    nodo = Node(3)
+    assert nodo.key == 3
+    assert nodo.left == None
+    assert nodo.right == None
+	
+    assert nodo.equals(nodo)
 
-
-test()
+    stree = SplayTree()
+    assert stree.root == None
+    assert stree.header.key == None
+print test()
 
