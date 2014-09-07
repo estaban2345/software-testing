@@ -34,12 +34,20 @@ def test():
     assert stree.root.key == node2.key
     assert result == None
 
+    print( stree.root.key  )
+
+    result = stree.insert(5)
+    retult = stree.insert(5)
+    assert result == None
+    
+    print( stree.root.key  )
+    
     result = stree.insert(6)
     assert stree.root.right == None
     assert type(stree.root.left) == type(stree)
     assert stree.root.left.key == 5
     
-    print( type(stree.root.left) == type(stree)  ) #== Node(4)
+    print( stree.root.key  ) #== Node(4)
 
     #stree.splay(4)
     #assert stree.header.left == None
