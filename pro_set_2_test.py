@@ -29,12 +29,17 @@ def test():
     nodo1 = Node(5)
     assert stree.root.right.key == nodo1.key
     assert stree.root.right != None
+    assert isinstance(stree.root.right,Node)
     node2 = Node(4)
     assert stree.root.key == node2.key
     assert result == None
 
-    result = stree.insert(5)
-    print(   ) #== Node(4)
+    result = stree.insert(6)
+    assert stree.root.right == None
+    assert isinstance(stree.root.left,Node)
+    assert stree.root.left.key == 5
+    
+    print( isinstance(stree.root.left,Node)  ) #== Node(4)
 
     #stree.splay(4)
     #assert stree.header.left == None
