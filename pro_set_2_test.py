@@ -29,7 +29,7 @@ def test():
     nodo1 = Node(5)
     assert stree.root.right.key == nodo1.key
     assert stree.root.right != None
-    assert type(stree.root.right) == type(stree)
+    assert type(stree.root.right) == type(nodo)
     node2 = Node(4)
     assert stree.root.key == node2.key
     assert result == None
@@ -37,28 +37,27 @@ def test():
     print( stree.root.key  )
 
     result = stree.insert(5)
-    retult = stree.insert(5)
+    result = stree.insert(5)
     assert result == None
-    
+
     print( stree.root.key  )
     
     result = stree.insert(6)
     assert stree.root.right == None
-    assert type(stree.root.left) == type(stree)
+    assert type(stree.root.left) == type(nodo)
     assert stree.root.left.key == 5
     
-    print( stree.root.key  ) #== Node(4)
+    print(  stree.root.key,stree.root.right, stree.root.left )
 
-    #stree.splay(4)
-    #assert stree.header.left == None
-    #assert stree.header.right == None
+    result = stree.remove(5)
 
-	#assert stree.splay(5) == None
+    print(  stree.root.key, stree.root.right.key,stree.root.left )
 
-    #assert not stree.splay(4)
-    #assert stree.root.left == None
+    result = stree.remove(4)
+
+    result = stree.remove(6)
+
+    print(  stree.root )
 
 
-
-    #return stree.root.key
 print (test())
