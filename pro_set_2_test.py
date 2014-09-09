@@ -47,15 +47,19 @@ def test():
     assert type(stree.root.left) == type(nodo)
     assert stree.root.left.key == 5
     
-    print(  stree.root.key,stree.root.right, stree.root.left )
+    #print(  stree.root.key,stree.root.right, stree.root.left.key )
 
     result = stree.remove(5)
+    assert stree.root.left == None
+    assert type(stree.root.right) == type(nodo)
+    assert stree.root.key == 4
+    assert stree.root.right.key == 6
 
-    print(  stree.root.key, stree.root.right.key,stree.root.left )
+    #print(  stree.root.key, stree.root.right.key,stree.root.left )
 
-    result = stree.remove(4)
+    #result = stree.remove(4)
 
-    result = stree.remove(6)
+    #result = stree.remove(6)
 
     print(  stree.root )
 

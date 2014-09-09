@@ -55,17 +55,24 @@ class SplayTree:
 
     def remove(self, key):
         self.splay(key)
+        #print("removed:", self.root.left.key,self.root.right.key, self.root.key)
         if self.root is None or key != self.root.key:
+
             return
 
         # Now delete the root.
         if self.root.left== None:
             self.root = self.root.right
+
         else:
             x = self.root.right
             self.root = self.root.left
+            print("new:", self.root.left,self.root.key, self.root.right)
             self.splay(key)
+            print("new:", self.root.left,self.root.key, self.root.right)
             self.root.right = x
+            print("Boom!!!")
+            print("new:", self.root.left,self.root.key, self.root.right.key)
 
     def findMin(self):
         if self.root == None:
