@@ -67,12 +67,12 @@ class SplayTree:
         else:
             x = self.root.right
             self.root = self.root.left
-            print("new:", self.root.left,self.root.key, self.root.right)
+            #print("new:", self.root.left,self.root.key, self.root.right)
             self.splay(key)
-            print("new:", self.root.left,self.root.key, self.root.right)
+            #print("new:", self.root.left,self.root.key, self.root.right)
             self.root.right = x
-            print("Boom!!!")
-            print("new:", self.root.left,self.root.key, self.root.right.key)
+            #print("Boom!!!")
+            #print("new:", self.root.left,self.root.key, self.root.right.key)
 
     def findMin(self):
         if self.root == None:
@@ -143,6 +143,7 @@ class SplayTree:
         t.left = self.header.right
         t.right = self.header.left
         self.root = t
+        #i must print here for root and header
 
 
 
